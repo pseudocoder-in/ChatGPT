@@ -5,15 +5,19 @@ A lighweight app to reside in the top menu bar on your MAC.
 Shortcut : cmd + shift + G
 ```
 ### Downloads
-[Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.1/chatgpt_0.0.1_aarch64.dmg)
+[Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.2/chatgpt_0.0.2_aarch64.dmg)
 
-[Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.1/chatgpt_0.0.1_x64.dmg)
-
-### Screenshots
-
-<a href="url"><img src="https://github.com/pseudocoder-in/ChatGPT/assets/83978810/71ccf925-b831-4c02-b59e-56e6c460b60a" align="centre"  width="600" ></a>
-
+[Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.2/chatgpt_0.0.2_x64.dmg)
 
 
 ### Credit
-All credit and copyrights goes to OpenAI.
+All credit and copyrights goes to OpenAI and Google.
+
+### Screenshots
+<div>
+<a href="url"><img src="https://github.com/pseudocoder-in/ChatGPT/assets/83978810/71ccf925-b831-4c02-b59e-56e6c460b60a" align="left"  width="250" ></a>
+<a href="url"><img src="https://github.com/pseudocoder-in/ChatGPT/assets/83978810/c3b9c504-650d-4809-be4b-97e4d336d352" align="left"  width="250" ></a>
+<a href="url"><img src="https://github.com/pseudocoder-in/ChatGPT/assets/83978810/c967c6ee-e852-4037-97f4-6bb8acd7ef85" align="left"  width="250" ></a>
+</div>
+
+
