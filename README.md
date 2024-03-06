@@ -7,6 +7,7 @@ Shortcut : cmd + shift + G
 ### Downloads
 [Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.1/chatgpt_0.0.1_aarch64.dmg)
 
+[Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.1/chatgpt_0.0.1_x64.dmg)
 
 ### Screenshots
 
