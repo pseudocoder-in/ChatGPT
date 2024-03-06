@@ -45,7 +45,17 @@ fn main() {
             _ => {}
         })
         .setup(|app| {
+            let main_window = app.get_window("main").unwrap();
             //app.set_activation_policy(tauri::ActivationPolicy::Accessory);
+            #[cfg(target_os = "macos")]
+            {
+                use cocoa::appkit::{NSWindow, NSWindowCollectionBehavior};
+                use cocoa::base::id;
+                let ns_win = main_window.ns_window().unwrap() as id;
+                unsafe {
+                    ns_win.setCollectionBehavior_(NSWindowCollectionBehavior::NSWindowCollectionBehaviorMoveToActiveSpace);
+                }
+            }
             load_chat_gpt(app.handle());
             Ok(())
         })
