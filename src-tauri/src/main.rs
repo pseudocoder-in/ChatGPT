@@ -15,6 +15,7 @@ use std::sync::Mutex;
 enum AssistantType {
     ChatGPT,
     Gemini,
+    Copilot,
 }
 
 static ASSIST_ENUM: Mutex<AssistantType> = Mutex::new(AssistantType::ChatGPT);
@@ -23,10 +24,12 @@ static ASSIST_ENUM: Mutex<AssistantType> = Mutex::new(AssistantType::ChatGPT);
 fn main() {
     let chatgpt = CustomMenuItem::new("chatgpt".to_string(), "ChatGPT").selected();
     let gemini = CustomMenuItem::new("gemini".to_string(), "Gemini");
+    let copilot = CustomMenuItem::new("copilot".to_string(), "Copilot");
     let quit = CustomMenuItem::new("quit".to_string(), "Quit");
     let system_tray_menu = SystemTrayMenu::new()
     .add_item(chatgpt)
     .add_item(gemini)
+    .add_item(copilot)
     .add_native_item(SystemTrayMenuItem::Separator)
     .add_item(quit);
     let mut app = tauri::Builder::default()
@@ -55,6 +58,7 @@ fn main() {
                 SystemTrayEvent::MenuItemClick { id, .. } => {
                     app.tray_handle().get_item("chatgpt").set_selected(false).unwrap();
                     app.tray_handle().get_item("gemini").set_selected(false).unwrap();
+                    app.tray_handle().get_item("copilot").set_selected(false).unwrap();
                     match id.as_str() {
                       "quit" => {
                         std::process::exit(0);
@@ -72,6 +76,15 @@ fn main() {
                         {
                             let mut global_enum = ASSIST_ENUM.lock().unwrap();
                             *global_enum = AssistantType::Gemini;
+                        }
+                        load_chat_gpt(app.clone());
+                        let item_handle: tauri::SystemTrayMenuItemHandle = app.tray_handle().get_item(&id);
+                        item_handle.set_selected(true).unwrap();
+                      }
+                      "copilot" => {
+                        {
+                            let mut global_enum = ASSIST_ENUM.lock().unwrap();
+                            *global_enum = AssistantType::Copilot;
                         }
                         load_chat_gpt(app.clone());
                         let item_handle: tauri::SystemTrayMenuItemHandle = app.tray_handle().get_item(&id);
@@ -146,6 +159,9 @@ fn load_chat_gpt(app_handle: tauri::AppHandle) {
         AssistantType::Gemini => {
             let _ = main_window.eval(&format!("window.location.replace('https://gemini.google.com/app');"));
         }
+        AssistantType::Copilot => {
+            let _ = main_window.eval(&format!("window.location.replace('https://copilot.microsoft.com/');"));
+        }
     }
 }
 
@@ -158,6 +174,8 @@ fn prepare_chat_gpt_window(window: tauri::Window) {
         }
         AssistantType::Gemini => {
             //let _ = window.eval(&format!("document.querySelectorAll('.boqOnegoogleliteOgbOneGoogleBar').forEach(element => element.style.display = 'none');"));
+        }
+        AssistantType::Copilot => {
         }
     }
 }
