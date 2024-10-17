@@ -2,7 +2,7 @@
 
 A lighweight app to reside in the top menu bar on your MAC.
 ```
-Shortcut : cmd + shift + G
+Shortcut : CMD+Option+Control+Shift+G
 ```
 ### Downloads
 [Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.4/chatgpt_0.0.4_aarch64.dmg)
