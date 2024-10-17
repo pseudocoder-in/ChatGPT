@@ -5,9 +5,9 @@ A lighweight app to reside in the top menu bar on your MAC.
 Shortcut : cmd + shift + G
 ```
 ### Downloads
-[Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.3/chatgpt_0.0.3_aarch64.dmg)
+[Mac Arm 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.4/chatgpt_0.0.4_aarch64.dmg)
 
-[Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.3/chatgpt_0.0.3_x64.dmg)
+[Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.4/chatgpt_0.0.4_x64.dmg)
 
 
 ### Build Steps
@@ -25,7 +25,7 @@ Update the version everywhere in the project.
 
 ```
 tauri build --target aarch64-apple-darwin
-tauri build --target x86_64-apple-darwin 
+tauri build --target x86_64-apple-darwin
 ```
 
 
