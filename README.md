@@ -10,6 +10,9 @@ Shortcut : CMD+Option+Control+Shift+G
 [Mac Intel 64.dmg](https://github.com/pseudocoder-in/ChatGPT/releases/download/0.0.4/chatgpt_0.0.4_x64.dmg)
 
 
+### Support
+<a href="https://www.buymeacoffee.com/pseudocodero" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
 ### Build Steps
 
 #### Running locally
